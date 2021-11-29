@@ -1,4 +1,4 @@
-const assertEqual = require('./assertEqual');
+const assertArraysEqual = require('./assertArraysEqual');
 
 const tail = (arr) => {
   let tails = arr.splice(1);
