@@ -1,7 +1,4 @@
-const assertEqual = (actual, expected) => {
-  return actual === expected ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` :
-    `🛑🛑🛑 Assertion Failed:S ${actual} !== ${expected}`;
-};
+const assertEqual = require('./assertEqual');
 
 const findKeyByValue = (obj, value) => {
   if (Object.values(obj).includes(value)) {
