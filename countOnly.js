@@ -1,5 +1,3 @@
-const assertEqual = require("./assertEqual");
-
 const countOnly = function(allItems, itemsToCount) {
   let results = {};
   let checkedNames = [];
@@ -7,8 +5,10 @@ const countOnly = function(allItems, itemsToCount) {
   for (let name in itemsToCount) {
     if (itemsToCount[name]) checkedNames.push(name);
   }
+  //console.log("checkNames:", checkedNames);
 
-  const namesToCheck = firstNames.filter(names => checkedNames.includes(names));
+  const namesToCheck = allItems.filter(names => checkedNames.includes(names));
+  console.log("namesToCheck:", namesToCheck)
 
   for (let name of namesToCheck) {
     results.hasOwnProperty(name) ? results[name] += 1 : results[name] = 1;
@@ -17,3 +17,4 @@ const countOnly = function(allItems, itemsToCount) {
 };
 
 module.exports = countOnly;
+
