@@ -8,7 +8,7 @@ const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Re
 const result2 = takeUntil(data2, x => x === ',');
 
 describe('#takeUntil', () => {
-  it('it should return an empty array [] for result1', () => {
+  it('it should return [ 1, 2, 5, 7, 2 ] for result1', () => {
     assert.deepEqual(result1, [ 1, 2, 5, 7, 2 ]);
   });
 
