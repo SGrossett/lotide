@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const findKey = (obj, callback) => {
   let objKeysArr = Object.keys(obj);  
   
