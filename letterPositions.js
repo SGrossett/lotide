@@ -1,19 +1,6 @@
-const assertArraysEqual = function(actual, expected) {
-  return eqArrays(actual, expected) ? `✅✅✅ Assertion Passed: ${actual} === ${expected}` :
-    `🛑🛑🛑 Assertion Failed:S ${actual} !== ${expected}`;
-};
+const assertArraysEqual = require('./assertArraysEqual')
 
-const eqArrays = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) {
-    return false;
-  } else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-  } return true;
-};
+const eqArrays = require('./eqArrays');
 
 
 const letterPositions = function(sentence) {
@@ -27,6 +14,3 @@ const letterPositions = function(sentence) {
 
   return results;
 };
-
-letterPositions("lighthouse in the house");
-assertArraysEqual(letterPositions("hello").e, [1]);
