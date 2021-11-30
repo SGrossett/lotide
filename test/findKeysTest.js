@@ -19,7 +19,7 @@ let result2 = findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 5)
 
-describe('#countLetters', () => {
+describe('#findKey', () => {
   it('it should return "noma" for result1', () => {
     assert.strictEqual(result1, "noma");
   });
