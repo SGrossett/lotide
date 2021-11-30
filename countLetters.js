@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 const countLetters = (str) => {
   let letters = str.split('');
   let count = {};
@@ -8,6 +6,6 @@ const countLetters = (str) => {
     count.hasOwnProperty(letter) ? count[letter] += 1 : count[letter] = 1;
   }
   return count;
-}
+};
 
 module.exports = countLetters;
